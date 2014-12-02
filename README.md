@@ -1,4 +1,4 @@
-Question Answering Evaluation Framework
+QA Evaluation Framework
 =======================
 
 An Evaluation Framework for Question Answering Systems

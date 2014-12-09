@@ -88,6 +88,7 @@ public class Evaluator {
             System.out.println(String.format("%-20s%10s", "Correct Answers:", correctAnswers));
             System.out.println(String.format("%-20s%10s", "Incorrect Answers:", incorrectAnswers));
             System.out.println(String.format("%-20s%10s", "No Answers:", noAnswers));
+            System.out.println(String.format("%-20s%10s", "Precision:", (1.0*correctAnswers)/(1.0*questions)));
             System.out.println();
 
         }

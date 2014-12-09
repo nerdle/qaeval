@@ -25,9 +25,18 @@ public class DummyQuestionAnswerer implements QuestionAnswerer {
     public Answer answer(Question question) {
         Answer answer = new Answer();
         List<String> answers = new ArrayList<>();
-        answers.add("dummy answer");
-        answer.setAnswers(answers);
 
+        if (Math.random() > 0.2) {
+            answers.add("dummy answer");
+            answers.add("wrong answer");
+
+            if (Math.random() > 0.5) {
+                answers.add("correct_answer");
+            }
+        }
+        
+        answer.setAnswers(answers);
+        
         return answer;
     }
 

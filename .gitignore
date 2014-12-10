@@ -9,3 +9,7 @@ release.properties
 .classpath
 .project
 .settings/
+
+# IntelliJ
+.idea/
+qa-evaluation-framework.iml

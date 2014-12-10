@@ -9,7 +9,7 @@ An Evaluation Framework for Question Answering Systems.
 
 The goal of the _QA Evaluation Framework_ is to promote research on systems that retrieve answers rather than documents in response to a natural language question. The focus is on systems that can function for a given topic.
 
-The framework will consist of a question set for each topics with. Each question set will consist of questions with differnt factoid question type like "who", "where" or "when".
+The framework will consist of a question set for each topics with. Each question set will consist of questions with different factoid question types.
 
 ## Get Started
 

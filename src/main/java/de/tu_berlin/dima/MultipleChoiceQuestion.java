@@ -55,5 +55,4 @@ public class MultipleChoiceQuestion extends Question {
         this.answerChoices = answerChoices;
     }
 
-
 }

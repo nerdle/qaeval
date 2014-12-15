@@ -16,6 +16,8 @@
 
 package de.tu_berlin.dima;
 
+import de.tu_berlin.dima.stringmetric.Question;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -16,31 +16,27 @@
 
 package de.tu_berlin.dima;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class EvaluationEntry {
 
     private String qid;
     private String type;
     private String question;
-    private String mc_1;
-    private String mc_2;
-    private String mc_3;
-    private String mc_4;
     private String answer;
     private String source;
+    private Set<String> answerChoices = new HashSet<>();
 
     public EvaluationEntry() {
         super();
     }
 
-    public EvaluationEntry(String qid, String type, String question, String mc_1, String mc_2, String mc_3, String mc_4, String answer, String source) {
+    public EvaluationEntry(String qid, String type, String question, String answer, String source) {
         super();
         this.qid = qid;
         this.type = type;
         this.question = question;
-        this.mc_1 = mc_1;
-        this.mc_2 = mc_2;
-        this.mc_3 = mc_3;
-        this.mc_4 = mc_4;
         this.answer = answer;
         this.source = source;
     }
@@ -52,10 +48,10 @@ public class EvaluationEntry {
         this.qid = entry[0];
         this.type = entry[1];
         this.question = entry[2];
-        this.mc_1 = entry[3];
-        this.mc_2 = entry[4];
-        this.mc_3 = entry[5];
-        this.mc_4 = entry[6];
+        this.answerChoices.add(entry[3]);
+        this.answerChoices.add(entry[4]);
+        this.answerChoices.add(entry[5]);
+        this.answerChoices.add(entry[6]);
         this.answer = entry[7];
         this.source = entry[8];
     }
@@ -84,38 +80,6 @@ public class EvaluationEntry {
         this.question = question;
     }
 
-    public String getMc_1() {
-        return mc_1;
-    }
-
-    public void setMc_1(String mc_1) {
-        this.mc_1 = mc_1;
-    }
-
-    public String getMc_2() {
-        return mc_2;
-    }
-
-    public void setMc_2(String mc_2) {
-        this.mc_2 = mc_2;
-    }
-
-    public String getMc_3() {
-        return mc_3;
-    }
-
-    public void setMc_3(String mc_3) {
-        this.mc_3 = mc_3;
-    }
-
-    public String getMc_4() {
-        return mc_4;
-    }
-
-    public void setMc_4(String mc_4) {
-        this.mc_4 = mc_4;
-    }
-
     public String getAnswer() {
         return answer;
     }
@@ -131,5 +95,14 @@ public class EvaluationEntry {
     public void setSource(String source) {
         this.source = source;
     }
+
+    public Set<String> getAnswerChoices() {
+        return answerChoices;
+    }
+
+    public void setAnswerChoices(Set<String> answerChoices) {
+        this.answerChoices = answerChoices;
+    }
+
 
 }

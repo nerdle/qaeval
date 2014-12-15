@@ -16,35 +16,24 @@
 
 package de.tu_berlin.dima;
 
-import de.tu_berlin.dima.stringmetric.Question;
-
 import java.util.Set;
 
 public class MultipleChoiceQuestion extends Question {
 
-    private String question;
     private Set<String> answerChoices;
 
-    public MultipleChoiceQuestion(String question) {
-        super(question);
+    public MultipleChoiceQuestion(Topic topic, String question) {
+        super(topic, question);
     }
 
-    public MultipleChoiceQuestion(String question, Set<String> answerChoices) {
-        super(question);
+    public MultipleChoiceQuestion(Topic topic, String question, Set<String> answerChoices) {
+        super(topic, question);
         this.answerChoices = answerChoices;
     }
 
     public MultipleChoiceQuestion(Topic topic, EvaluationEntry evaluationEntry) {
-        super(evaluationEntry.getQuestion());
+        super(topic, evaluationEntry.getQuestion());
         this.answerChoices = evaluationEntry.getAnswerChoices();
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
     }
 
     public Set<String> getAnswerChoices() {

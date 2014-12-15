@@ -21,7 +21,6 @@ import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
 
 import de.tu_berlin.dima.stringmetric.JaccardMetric;
-import de.tu_berlin.dima.stringmetric.Question;
 
 public class Evaluator {
 
@@ -61,7 +60,7 @@ public class Evaluator {
                     // increment
                     questions++;
 
-                    Question question = new Question(evaluationEntry.getQuestion());
+                    Question question = new Question(topic, evaluationEntry.getQuestion());
                     Answer answerToEvaluate = questionAnswerer.answer(question);
 
                     if (answerToEvaluate.getAnswers().size() > 0) {
@@ -89,7 +88,7 @@ public class Evaluator {
             System.out.println(String.format("%-20s%10s", "Correct Answers:", correctAnswers));
             System.out.println(String.format("%-20s%10s", "Incorrect Answers:", incorrectAnswers));
             System.out.println(String.format("%-20s%10s", "No Answers:", noAnswers));
-            System.out.println(String.format("%-20s%10s", "Precision:", (1.0*correctAnswers)/(1.0*questions)));
+            System.out.println(String.format("%-20s%10s", "Precision:", (1.0 * correctAnswers) / (1.0 * questions)));
             System.out.println();
 
         }

@@ -16,8 +16,6 @@
 
 package de.tu_berlin.dima;
 
-import de.tu_berlin.dima.stringmetric.Question;
-
 public interface QuestionAnswerer {
     public Answer answer(Question question);
 }

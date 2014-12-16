@@ -22,17 +22,17 @@ public class MultipleChoiceQuestion extends Question {
 
     private Set<String> answerChoices;
 
-    public MultipleChoiceQuestion(Topic topic, String question) {
-        super(topic, question);
+    public MultipleChoiceQuestion(String question) {
+        super(question);
     }
 
-    public MultipleChoiceQuestion(Topic topic, String question, Set<String> answerChoices) {
-        super(topic, question);
+    public MultipleChoiceQuestion(String question, Set<String> answerChoices) {
+        super(question);
         this.answerChoices = answerChoices;
     }
 
     public MultipleChoiceQuestion(Topic topic, EvaluationEntry evaluationEntry) {
-        super(topic, evaluationEntry.getQuestion());
+        super(evaluationEntry.getQuestion());
         this.answerChoices = evaluationEntry.getAnswerChoices();
     }
 

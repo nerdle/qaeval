@@ -18,29 +18,18 @@ package de.tu_berlin.dima;
 
 public class Question {
 
-    private Topic topic;
     private String question;
 
     public Question() {
         super();
     }
 
-    public Question(Topic topic, String question) {
-        this.topic = topic;
+    public Question(String question) {
         this.question = question;
     }
 
     public Question(Topic topic, EvaluationEntry evaluationEntry) {
-        this.topic = topic;
         this.question = evaluationEntry.getQuestion();
-    }
-
-    public Topic getTopic() {
-        return topic;
-    }
-
-    public void setTopic(Topic topic) {
-        this.topic = topic;
     }
 
     public String getQuestion() {

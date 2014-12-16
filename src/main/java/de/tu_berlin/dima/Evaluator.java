@@ -60,7 +60,7 @@ public class Evaluator {
                     // increment
                     questions++;
 
-                    Question question = new Question(topic, evaluationEntry.getQuestion());
+                    Question question = new Question(evaluationEntry.getQuestion());
                     Answer answerToEvaluate = questionAnswerer.answer(question);
 
                     if (answerToEvaluate.getAnswers().size() > 0) {

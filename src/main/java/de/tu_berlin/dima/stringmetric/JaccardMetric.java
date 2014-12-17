@@ -16,6 +16,7 @@
 
 package de.tu_berlin.dima.stringmetric;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -25,11 +26,22 @@ public class JaccardMetric implements StringSetMetric {
     @Override
     public double compare(List<String> a, List<String> b) {
 
-        Set<String> union = new HashSet<String>(a);
-        union.addAll(b);
+        List<String> aC = new ArrayList<>();
+        List<String> bC = new ArrayList<>();
 
-        Set<String> intersection = new HashSet<String>(a);
-        intersection.retainAll(b);
+        for (String string : a) {
+            aC.add(string.toLowerCase());
+        }
+
+        for (String string : b) {
+            bC.add(string.toLowerCase());
+        }
+
+        Set<String> union = new HashSet<String>(aC);
+        union.addAll(bC);
+
+        Set<String> intersection = new HashSet<String>(aC);
+        intersection.retainAll(bC);
 
         if (union.size() != 0) {
             return (double) intersection.size() / (double) union.size();

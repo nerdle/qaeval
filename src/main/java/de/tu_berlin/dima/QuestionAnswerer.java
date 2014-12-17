@@ -17,5 +17,5 @@
 package de.tu_berlin.dima;
 
 public interface QuestionAnswerer {
-    public Answer answer(Question question);
+    public Answer answer(Topic topic, Question question);
 }

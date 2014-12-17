@@ -59,14 +59,14 @@ public class Evaluator {
                 for (EvaluationEntry evaluationEntry : evaluationSet.getEvaluationSet()) {
 
                     if (index == evaluationConfig.getLimit()) {
-                       break;
+                        break;
                     }
 
                     // increment
                     questions++;
 
                     Question question = new Question(evaluationEntry.getQuestion());
-                    Answer answerToEvaluate = questionAnswerer.answer(question);
+                    Answer answerToEvaluate = questionAnswerer.answer(topic, question);
 
                     if (answerToEvaluate.getAnswers().size() > 0) {
                         BooleanJudgment judgment = (BooleanJudgment) booleanAnswerEvaluator.evaluate(answerToEvaluate, evaluationEntry);
@@ -83,7 +83,7 @@ public class Evaluator {
                         // increment
                         noAnswers++;
                     }
-                    
+
                     index++;
 
                 }

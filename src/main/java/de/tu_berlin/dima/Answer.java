@@ -16,6 +16,7 @@
 
 package de.tu_berlin.dima;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Answer {
@@ -24,6 +25,7 @@ public class Answer {
 
     public Answer() {
         super();
+        this.answers = new ArrayList<>();
     }
 
     public Answer(List<String> answers) {
@@ -37,6 +39,10 @@ public class Answer {
 
     public void setAnswers(List<String> answers) {
         this.answers = answers;
+    }
+
+    public void add(String answer) {
+        this.answers.add(answer);
     }
 
 }

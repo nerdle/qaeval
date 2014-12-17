@@ -22,7 +22,7 @@ import java.util.List;
 public class DummyQuestionAnswerer implements QuestionAnswerer {
 
     @Override
-    public Answer answer(Question question) {
+    public Answer answer(Topic topic, Question question) {
         Answer answer = new Answer();
         List<String> answers = new ArrayList<>();
 
@@ -34,9 +34,9 @@ public class DummyQuestionAnswerer implements QuestionAnswerer {
                 answers.add("correct_answer");
             }
         }
-        
+
         answer.setAnswers(answers);
-        
+
         return answer;
     }
 

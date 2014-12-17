@@ -40,6 +40,11 @@ public class EvaluationConfig {
      * The resources of the topics.
      */
     private Map<Topic, String> topicResourceMap;
+    
+    /**
+     * The limit of questions used during the evaluation.
+     */
+    private int limit = -1;
 
     public EvaluationConfig() throws URISyntaxException {
         super();
@@ -56,11 +61,12 @@ public class EvaluationConfig {
         this.topicResourceMap.put(Topic.STAR_WARS, Paths.get(getClass().getResource("/star-wars.tsv").toURI()).toFile().getPath());
     }
 
-    public EvaluationConfig(List<Topic> topics, List<QuestionType> questionsTypes, Map<Topic, String> topicResourceMap) {
+    public EvaluationConfig(List<Topic> topics, List<QuestionType> questionsTypes, Map<Topic, String> topicResourceMap, int limit) {
         super();
         this.topics = topics;
         this.questionsTypes = questionsTypes;
         this.topicResourceMap = topicResourceMap;
+        this.limit = limit;
     }
 
     public List<Topic> getTopics() {
@@ -85,6 +91,14 @@ public class EvaluationConfig {
 
     public void setTopicResourceMap(Map<Topic, String> topicResourceMap) {
         this.topicResourceMap = topicResourceMap;
+    }
+
+    public int getLimit() {
+        return limit;
+    }
+
+    public void setLimit(int limit) {
+        this.limit = limit;
     }
 
 }

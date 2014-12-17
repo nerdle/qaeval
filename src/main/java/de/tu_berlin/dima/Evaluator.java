@@ -55,7 +55,12 @@ public class Evaluator {
             if (filename != null) {
                 EvaluationSet evaluationSet = new EvaluationSet(topic, new FileInputStream(filename));
 
+                int index = 0;
                 for (EvaluationEntry evaluationEntry : evaluationSet.getEvaluationSet()) {
+
+                    if (index == evaluationConfig.getLimit()) {
+                       break;
+                    }
 
                     // increment
                     questions++;
@@ -78,6 +83,8 @@ public class Evaluator {
                         // increment
                         noAnswers++;
                     }
+                    
+                    index++;
 
                 }
             }

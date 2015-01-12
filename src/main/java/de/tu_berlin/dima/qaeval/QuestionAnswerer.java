@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
-public enum QuestionType {
-    WHO, WHICH, WHERE, WHEN, HOW, WHOM, WHAT, WHY;
+public interface QuestionAnswerer {
+    public Answer answer(Topic topic, Question question);
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
 import java.util.HashSet;
 import java.util.Set;

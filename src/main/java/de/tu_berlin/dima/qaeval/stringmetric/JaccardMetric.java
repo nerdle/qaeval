@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.stringmetric;
+package de.tu_berlin.dima.qaeval.stringmetric;
 
 import java.util.ArrayList;
 import java.util.HashSet;

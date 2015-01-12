@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import de.tu_berlin.dima.stringmetric.StringSetMetric;
+import de.tu_berlin.dima.qaeval.stringmetric.StringSetMetric;
 
 public class BooleanAnswerEvaluator extends AnswerEvaluator {
 

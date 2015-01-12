@@ -14,20 +14,26 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
-import org.junit.Test;
+public class BooleanJudgment extends Judgment {
+    private boolean isCorrect;
 
-public class EvaluatorTest {
+    public BooleanJudgment() {
+        super();
+    }
 
-    @Test
-    public void test() throws Exception {
-        EvaluationConfig evaluationConfig = new EvaluationConfig();
-        
-        Evaluator evaluator = new Evaluator(evaluationConfig);
+    public BooleanJudgment(boolean isCorrect) {
+        super();
+        this.isCorrect = isCorrect;
+    }
 
-        QuestionAnswerer questionAnswerer = new DummyQuestionAnswerer();
-        evaluator.start(questionAnswerer);
+    public boolean isCorrect() {
+        return isCorrect;
+    }
+
+    public void setCorrect(boolean isCorrect) {
+        this.isCorrect = isCorrect;
     }
 
 }

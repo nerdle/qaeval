@@ -14,10 +14,30 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.stringmetric;
+package de.tu_berlin.dima.qaeval;
 
-import java.util.List;
+public class Question {
 
-public interface StringSetMetric {
-    double compare(List<String> a, List<String> b);
+    private String question;
+
+    public Question() {
+        super();
+    }
+
+    public Question(String question) {
+        this.question = question;
+    }
+
+    public Question(Topic topic, EvaluationEntry evaluationEntry) {
+        this.question = evaluationEntry.getQuestion();
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
 }

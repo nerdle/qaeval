@@ -14,8 +14,25 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
-public interface QuestionAnswerer {
-    public Answer answer(Topic topic, Question question);
+import org.junit.Test;
+
+import de.tu_berlin.dima.qaeval.DummyQuestionAnswerer;
+import de.tu_berlin.dima.qaeval.EvaluationConfig;
+import de.tu_berlin.dima.qaeval.Evaluator;
+import de.tu_berlin.dima.qaeval.QuestionAnswerer;
+
+public class EvaluatorTest {
+
+    @Test
+    public void test() throws Exception {
+        EvaluationConfig evaluationConfig = new EvaluationConfig();
+        
+        Evaluator evaluator = new Evaluator(evaluationConfig);
+
+        QuestionAnswerer questionAnswerer = new DummyQuestionAnswerer();
+        evaluator.start(questionAnswerer);
+    }
+
 }

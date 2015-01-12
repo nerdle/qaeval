@@ -14,30 +14,10 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval.stringmetric;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class DummyQuestionAnswerer implements QuestionAnswerer {
-
-    @Override
-    public Answer answer(Topic topic, Question question) {
-        Answer answer = new Answer();
-        List<String> answers = new ArrayList<>();
-
-        if (Math.random() > 0.2) {
-            answers.add("dummy answer");
-            answers.add("wrong answer");
-
-            if (Math.random() > 0.5) {
-                answers.add("correct_answer");
-            }
-        }
-
-        answer.setAnswers(answers);
-
-        return answer;
-    }
-
+public interface StringSetMetric {
+    double compare(List<String> a, List<String> b);
 }

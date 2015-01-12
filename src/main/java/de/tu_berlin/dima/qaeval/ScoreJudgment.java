@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
 public class ScoreJudgment extends Judgment {
     private double score;

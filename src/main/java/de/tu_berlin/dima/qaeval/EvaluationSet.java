@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
 import java.io.IOException;
 import java.io.InputStream;

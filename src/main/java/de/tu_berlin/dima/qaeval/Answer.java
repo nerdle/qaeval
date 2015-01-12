@@ -14,26 +14,35 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
-public class BooleanJudgment extends Judgment {
-    private boolean isCorrect;
+import java.util.ArrayList;
+import java.util.List;
 
-    public BooleanJudgment() {
+public class Answer {
+
+    private List<String> answers;
+
+    public Answer() {
         super();
+        this.answers = new ArrayList<>();
     }
 
-    public BooleanJudgment(boolean isCorrect) {
+    public Answer(List<String> answers) {
         super();
-        this.isCorrect = isCorrect;
+        this.answers = answers;
     }
 
-    public boolean isCorrect() {
-        return isCorrect;
+    public List<String> getAnswers() {
+        return answers;
     }
 
-    public void setCorrect(boolean isCorrect) {
-        this.isCorrect = isCorrect;
+    public void setAnswers(List<String> answers) {
+        this.answers = answers;
+    }
+
+    public void add(String answer) {
+        this.answers.add(answer);
     }
 
 }

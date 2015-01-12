@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
 import java.net.URISyntaxException;
 import java.nio.file.Paths;

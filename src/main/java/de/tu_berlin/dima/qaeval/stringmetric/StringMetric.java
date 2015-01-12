@@ -14,30 +14,8 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval.stringmetric;
 
-public class Question {
-
-    private String question;
-
-    public Question() {
-        super();
-    }
-
-    public Question(String question) {
-        this.question = question;
-    }
-
-    public Question(Topic topic, EvaluationEntry evaluationEntry) {
-        this.question = evaluationEntry.getQuestion();
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
+public interface StringMetric {
+    double compare(String a, String b);
 }

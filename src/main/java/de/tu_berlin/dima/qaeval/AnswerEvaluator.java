@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima;
+package de.tu_berlin.dima.qaeval;
 
-public class Judgment {
-
+public abstract class AnswerEvaluator {
+    abstract public Judgment evaluate(Answer answerToEvaluate, EvaluationEntry evaluationEntry);
 }

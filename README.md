@@ -1,13 +1,13 @@
 [![Build Status](https://travis-ci.org/nerdle/qa-evaluation-framework.svg?branch=master)](https://travis-ci.org/nerdle/qa-evaluation-framework)
 
-QA Evaluation Framework
+QAEval
 =======================
 
 An Evaluation Framework for Question Answering Systems.
 
 ## Summary
 
-The goal of the _QA Evaluation Framework_ is to promote research on systems that retrieve answers rather than documents in response to a natural language question. The focus is on systems that can function for a given topic.
+The goal of the _QAEval_ is to promote research on systems that retrieve answers rather than documents in response to a natural language question. The focus is on systems that can function for a given topic.
 
 The framework will consist of a question set for each topics with. Each question set will consist of questions with different factoid question types.
 
@@ -20,12 +20,12 @@ The framework will consist of a question set for each topics with. Each question
 ### Build from source
 
 ```
-git clone https://github.com/nerdle/qa-evaluation-framework.git
-cd qa-evaluation-framework
+git clone https://github.com/nerdle/qaeval.git
+cd qaeval
 mvn clean package
 ```
 
-_QA Evaluation Framework_ is now installed in `qa-evaluation-framework/target`
+_QA Evaluation Framework_ is now installed in `qaeval/target`
 
 ## Sample Usage
 
@@ -71,5 +71,5 @@ public class Controller {
 
 ## License
 
-_QA Evaluation Framework_ is licensed under the Apache Software License Version 2.0. For more
+_QAEval_ is licensed under the Apache Software License Version 2.0. For more
 information please consult the LICENSE file.

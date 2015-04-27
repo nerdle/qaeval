@@ -14,8 +14,35 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval;
+package de.textmining.qaeval;
 
-public class Judgment {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Answer {
+
+    private List<String> answers;
+
+    public Answer() {
+        super();
+        this.answers = new ArrayList<>();
+    }
+
+    public Answer(List<String> answers) {
+        super();
+        this.answers = answers;
+    }
+
+    public List<String> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<String> answers) {
+        this.answers = answers;
+    }
+
+    public void add(String answer) {
+        this.answers.add(answer);
+    }
 
 }

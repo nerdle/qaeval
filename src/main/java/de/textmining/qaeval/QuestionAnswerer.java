@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval.stringmetric;
+package de.textmining.qaeval;
 
-public interface StringMetric {
-    double compare(String a, String b);
+public interface QuestionAnswerer {
+    public Answer answer(Topic topic, Question question);
 }

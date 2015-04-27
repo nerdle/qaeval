@@ -14,30 +14,26 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval;
+package de.textmining.qaeval;
 
-public class Question {
+public class BooleanJudgment extends Judgment {
+    private boolean isCorrect;
 
-    private String question;
-
-    public Question() {
+    public BooleanJudgment() {
         super();
     }
 
-    public Question(String question) {
-        this.question = question;
+    public BooleanJudgment(boolean isCorrect) {
+        super();
+        this.isCorrect = isCorrect;
     }
 
-    public Question(Topic topic, EvaluationEntry evaluationEntry) {
-        this.question = evaluationEntry.getQuestion();
+    public boolean isCorrect() {
+        return isCorrect;
     }
 
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
+    public void setCorrect(boolean isCorrect) {
+        this.isCorrect = isCorrect;
     }
 
 }

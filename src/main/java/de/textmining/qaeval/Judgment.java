@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval;
+package de.textmining.qaeval;
 
-public enum Topic {
-    SIMPSONS, STAR_TREK, STAR_WARS;
+public class Judgment {
+
 }

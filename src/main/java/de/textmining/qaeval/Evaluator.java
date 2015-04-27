@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval;
+package de.textmining.qaeval;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
 
-import de.tu_berlin.dima.qaeval.stringmetric.JaccardMetric;
+import de.textmining.qaeval.stringmetric.JaccardMetric;
 
 public class Evaluator {
 

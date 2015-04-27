@@ -18,10 +18,10 @@ package de.tu_berlin.dima.qaeval;
 
 import org.junit.Test;
 
-import de.tu_berlin.dima.qaeval.DummyQuestionAnswerer;
-import de.tu_berlin.dima.qaeval.EvaluationConfig;
-import de.tu_berlin.dima.qaeval.Evaluator;
-import de.tu_berlin.dima.qaeval.QuestionAnswerer;
+import de.textmining.qaeval.DummyQuestionAnswerer;
+import de.textmining.qaeval.EvaluationConfig;
+import de.textmining.qaeval.Evaluator;
+import de.textmining.qaeval.QuestionAnswerer;
 
 public class EvaluatorTest {
 

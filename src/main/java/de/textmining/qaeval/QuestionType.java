@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval;
+package de.textmining.qaeval;
 
-public abstract class AnswerEvaluator {
-    abstract public Judgment evaluate(Answer answerToEvaluate, EvaluationEntry evaluationEntry);
+public enum QuestionType {
+    WHO, WHICH, WHERE, WHEN, HOW, WHOM, WHAT, WHY;
 }

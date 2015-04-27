@@ -14,26 +14,8 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval;
+package de.textmining.qaeval;
 
-public class BooleanJudgment extends Judgment {
-    private boolean isCorrect;
-
-    public BooleanJudgment() {
-        super();
-    }
-
-    public BooleanJudgment(boolean isCorrect) {
-        super();
-        this.isCorrect = isCorrect;
-    }
-
-    public boolean isCorrect() {
-        return isCorrect;
-    }
-
-    public void setCorrect(boolean isCorrect) {
-        this.isCorrect = isCorrect;
-    }
-
+public abstract class AnswerEvaluator {
+    abstract public Judgment evaluate(Answer answerToEvaluate, EvaluationEntry evaluationEntry);
 }

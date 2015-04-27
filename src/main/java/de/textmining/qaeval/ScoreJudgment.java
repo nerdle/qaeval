@@ -14,35 +14,25 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval;
+package de.textmining.qaeval;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ScoreJudgment extends Judgment {
+    private double score;
 
-public class Answer {
-
-    private List<String> answers;
-
-    public Answer() {
+    public ScoreJudgment() {
         super();
-        this.answers = new ArrayList<>();
     }
 
-    public Answer(List<String> answers) {
-        super();
-        this.answers = answers;
+    public ScoreJudgment(double score) {
+        this.score = score;
     }
 
-    public List<String> getAnswers() {
-        return answers;
+    public double getScore() {
+        return score;
     }
 
-    public void setAnswers(List<String> answers) {
-        this.answers = answers;
-    }
-
-    public void add(String answer) {
-        this.answers.add(answer);
+    public void setScore(double score) {
+        this.score = score;
     }
 
 }

@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
-package de.tu_berlin.dima.qaeval;
+package de.textmining.qaeval.stringmetric;
 
-public enum QuestionType {
-    WHO, WHICH, WHERE, WHEN, HOW, WHOM, WHAT, WHY;
+import java.util.List;
+
+public interface StringSetMetric {
+    double compare(List<String> a, List<String> b);
 }

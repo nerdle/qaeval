@@ -7,9 +7,11 @@ An Evaluation Framework for Question Answering Systems.
 
 ## Summary
 
-The goal of the _QAEval_ is to promote research on systems that retrieve answers rather than documents in response to a natural language question. The focus is on systems that can function for a given topic.
+The goal of the _QAEval_ is to promote research on systems that retrieve answers rather than documents in response to a natural language question. The focus is on question answering systems that concentrate on a particular topic.
 
-The framework will consist of a question set for each topics with. Each question set will consist of questions with different factoid question types.
+The framework consists of a question set with the correct answers for each topic. Each question set will consist of questions with different factoid question types.
+
+The framework includes evaluation sets for the topics "Simpsons" and "Star Trek".
 
 ## Get Started
 
